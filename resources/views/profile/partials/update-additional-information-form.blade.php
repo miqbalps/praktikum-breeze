@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Additional Information') }}
+            {{ __('Informasi Tambahan') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __("Add your additional personal information.") }}
+            {{ __("Tambahkan informasi pribadi tambahan Anda.") }}
         </p>
     </header>
 
@@ -46,11 +46,11 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Simpan') }}</x-primary-button>
 
             @if (session('status') === 'add-info-updated')
             <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
-                class="text-sm text-gray-600">{{ __('Saved.') }}</p>
+                class="text-sm text-gray-600">{{ __('Simpan.') }}</p>
             @endif
         </div>
     </form>

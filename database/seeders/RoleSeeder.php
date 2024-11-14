@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Role;
 use App\Models\User;
 use App\Models\Student;
+use App\Models\Assistant;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -31,6 +32,14 @@ class RoleSeeder extends Seeder
 
         Student::create([
             'user_id' => $superAdminUser->id, // Gunakan ID dari user yang baru dibuat
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        Assistant::create([
+            'user_id' => $superAdminUser->id,
+            'type' => 'student',
+            'status' => 'active',// Ganti dengan password yang aman
             'created_at' => now(),
             'updated_at' => now(),
         ]);
